@@ -1,0 +1,28 @@
+Source: golang-github-xeipuuv-gojsonschema
+Section: golang
+Priority: optional
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>,
+           Tim Potter <tpot@hpe.com>,
+           Stephen Gelman <ssgelm@gmail.com>,
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+               golang-github-stretchr-testify-dev,
+               golang-github-xeipuuv-gojsonreference-dev,
+Standards-Version: 4.6.0
+Homepage: https://github.com/xeipuuv/gojsonschema
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-xeipuuv-gojsonschema
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-xeipuuv-gojsonschema.git
+XS-Go-Import-Path: github.com/xeipuuv/gojsonschema
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-go
+
+Package: golang-github-xeipuuv-gojsonschema-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: golang-github-xeipuuv-gojsonreference-dev,
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: implementation of JSON Schema, draft v4
+ Golang implementation of JSON Schema, based on IETF's draft v4.
